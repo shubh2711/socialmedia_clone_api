@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "2f0a64dc-c523-40d5-b443-eb9feaf1c107",
+		"name": "rest-api-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatePost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "testing user connection",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/shubham.f.tiwari/Desktop/Pizzeria Shubham Tiwari/angular/src/assets/cart1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/api/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPosts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8001/api/post/",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePosts",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"description\" : \"new test updated now with authentication\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/api/post/5ce00539ae72ac2940114c2d",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"post",
+						"5ce00539ae72ac2940114c2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Posts",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8001/api/post/5cde79b4f080ec214081c794",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"post",
+						"5cde79b4f080ec214081c794"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSinglePost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8001/api/post/5ce00539ae72ac2940114c2d",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"post",
+						"5ce00539ae72ac2940114c2d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer hgfcvsan4jkhbskj4853yj",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\" : \"Shubham\",\n  \"email\" : \"shubhamsrj.st@gmail.com\",\n  \"password\" : \"myPassword\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "me auth",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZGZlZGVhMzViMzg4NTdmY2I1NjM5YiJ9.op4g1S5vcYUMP6nAXLWip5R8-r-CzfemOq9LK8Qojkg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8001/api/auth/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVjZTEwYTQ1MzQ2OWZhMzMzODQ5ZWFkMSJ9.6jrJrgcCA067whbWwNVEWBgNhY6W3WxkaVSFPIf8-js",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8001/api/follow/5ce10a603469fa333849ead2",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"follow",
+						"5ce10a603469fa333849ead2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\" : \"shubh@gmail.com\",\n  \"password\" : \"myPassword\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
